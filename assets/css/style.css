@@ -32,6 +32,10 @@ header {
   height: 50px;
 }
 
+#quantita-tabelline {
+  margin-top: 2em;
+}
+
 .player-tab {
   border: 1px solid black;
   border-radius: 5px;

@@ -34,7 +34,7 @@ const playerTabGen = function () {
   playerZone.appendChild(playerTab);
 };
 
-window.addEventListener("DOMContentLoaded", createBoard(), playerTabGen());
+window.addEventListener("DOMContentLoaded", createBoard());
 // Parte dinamica
 const extrBtn = document.getElementById("random-number");
 
@@ -66,9 +66,20 @@ const extractNum = function () {
   }
 };
 
-extrBtn.addEventListener("click", extractNum);
+const playBtn = document.getElementById("play");
 
-const randomNumber = function () {
-  const randomNumber = Math.floor(Math.random() * 76) + 1;
-  return randomNumber;
-};
+playBtn.addEventListener("click", function (event) {
+  event.preventDefault();
+  const form = document.getElementById("quantita-tabelline");
+  const extrZone = document.getElementById("extraction-zone");
+  const extrBtn = document.createElement("button");
+  extrBtn.id = "random-number";
+  extrBtn.innerText = "ESTRAZIONE";
+  extrZone.appendChild(extrBtn);
+  extrBtn.addEventListener("click", extractNum);
+  const tabNum = document.getElementById("tab-num").value;
+  for (let i = 0; i < tabNum; i++) {
+    playerTabGen();
+  }
+  form.remove(form);
+});
