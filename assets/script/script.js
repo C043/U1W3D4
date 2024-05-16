@@ -44,10 +44,10 @@ const extractNum = function () {
   const randomNumber = Math.floor(Math.random() * 76) + 1;
   const number = document.getElementById("number");
   if (!randomNumbers.includes(randomNumber)) {
-    number.classList.add("number");
+    /*     number.classList.add("number");
     number.innerHTML = "";
     number.innerText = randomNumber;
-
+ */
     const numbers = document.getElementsByClassName("game-cell");
     const extractedNumber = numbers[randomNumber - 1];
     extractedNumber.classList.add("extracted-number");
@@ -72,15 +72,10 @@ const playBtn = document.getElementById("play");
 playBtn.addEventListener("click", function (event) {
   event.preventDefault();
   const form = document.getElementById("quantita-tabelline");
-  const numberSlot = document.getElementById("number-slot");
   const extrZone = document.getElementById("extraction-zone");
   const extrBtn = document.createElement("button");
   extrBtn.id = "random-number";
   extrBtn.innerText = "ESTRAZIONE";
-  const number = document.createElement("h3");
-  number.id = "number";
-  number.classList.add("number");
-  numberSlot.appendChild(number);
   extrZone.appendChild(extrBtn);
   extrBtn.addEventListener("click", extractNum);
   const tabNum = document.getElementById("tab-num").value;
