@@ -1,6 +1,14 @@
+body {
+  text-align: center;
+}
+
+header {
+  margin-top: 1em;
+}
+
 #game-board {
   text-align: left;
-  width: 75%;
+  width: 500px;
   margin: 1em auto;
 }
 
@@ -10,6 +18,14 @@
   margin: 0.5em;
   border: 1px solid black;
   border-radius: 3px;
-  padding: 1em;
+  padding: 0.5em;
   width: 1em;
+}
+
+.extracted-number {
+  background-color: rgb(239, 243, 135);
+}
+
+#number {
+  height: 50px;
 }

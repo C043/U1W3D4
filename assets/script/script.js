@@ -11,5 +11,18 @@ const createBoard = function () {
   }
 };
 
+const extrBtn = document.getElementById("random-number");
+
+extrBtn.addEventListener("click", function () {
+  const randomNumber = Math.floor(Math.random() * 76) + 1;
+  const number = document.getElementById("number");
+  number.innerHTML = "";
+  number.innerText = randomNumber;
+
+  const numbers = document.getElementsByClassName("game-cell");
+  const extractedNumber = numbers[randomNumber - 1];
+  extractedNumber.classList.add("extracted-number");
+});
+
 window.addEventListener("DOMContentLoaded", createBoard());
 // Parte dinamica
