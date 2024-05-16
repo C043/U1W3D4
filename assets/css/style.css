@@ -1,41 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 body {
   text-align: center;
   box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f1e8e6;
+  color: #543c52;
 }
 
 header {
-  margin-top: 1em;
+  margin-top: 2em;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 #game-board {
   text-align: left;
   width: 500px;
   margin: 1em auto;
-  border: 1px solid black;
   border-radius: 5px;
+  background-color: #edd2cb;
 }
 
 .game-cell {
   display: inline-block;
   text-align: center;
   margin: 0.5em;
-  border: 1px solid black;
   border-radius: 3px;
   padding: 0.5em;
   width: 1em;
+  background-color: white;
 }
 
 .extracted-number {
-  background-color: rgb(239, 243, 135);
+  background-color: #f55951;
+  color: white;
 }
 
 .number {
   height: 1em;
-  border: 1px solid black;
   border-radius: 3px;
   width: 1em;
   margin: 1em auto;
   padding: 1em;
+  background-color: #f55951;
+  color: white;
 }
 
 #quantita-tabelline {
@@ -43,10 +56,42 @@ header {
 }
 
 .player-tab {
-  border: 1px solid black;
   border-radius: 5px;
   width: 500px;
   margin: 2em auto;
+  background-color: #edd2cb;
+}
+
+form {
+  background-color: #edd2cb;
+  width: 500px;
+  margin: auto;
+  border-radius: 5px;
+}
+label {
+  display: block;
+  margin: 1em 0;
+  padding: 1em 0;
+}
+
+input {
+  width: 2em;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #f55951;
+  border: none;
+  padding: 0.5em;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5em;
+  margin: 0 0 1em 0;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 footer div {

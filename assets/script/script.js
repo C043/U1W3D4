@@ -72,10 +72,15 @@ const playBtn = document.getElementById("play");
 playBtn.addEventListener("click", function (event) {
   event.preventDefault();
   const form = document.getElementById("quantita-tabelline");
+  const numberSlot = document.getElementById("number-slot");
   const extrZone = document.getElementById("extraction-zone");
   const extrBtn = document.createElement("button");
   extrBtn.id = "random-number";
   extrBtn.innerText = "ESTRAZIONE";
+  const number = document.createElement("h3");
+  number.id = "number";
+  number.classList.add("number");
+  numberSlot.appendChild(number);
   extrZone.appendChild(extrBtn);
   extrBtn.addEventListener("click", extractNum);
   const tabNum = document.getElementById("tab-num").value;
