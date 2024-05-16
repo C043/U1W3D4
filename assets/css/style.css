@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  box-sizing: border-box;
 }
 
 header {
@@ -28,8 +29,13 @@ header {
   background-color: rgb(239, 243, 135);
 }
 
-#number {
-  height: 50px;
+.number {
+  height: 1em;
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 1em;
+  margin: 1em auto;
+  padding: 1em;
 }
 
 #quantita-tabelline {
@@ -41,4 +47,8 @@ header {
   border-radius: 5px;
   width: 500px;
   margin: 2em auto;
+}
+
+footer div {
+  height: 50px;
 }

@@ -44,6 +44,7 @@ const extractNum = function () {
   const randomNumber = Math.floor(Math.random() * 76) + 1;
   const number = document.getElementById("number");
   if (!randomNumbers.includes(randomNumber)) {
+    number.classList.add("number");
     number.innerHTML = "";
     number.innerText = randomNumber;
 
