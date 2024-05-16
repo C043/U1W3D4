@@ -71,16 +71,21 @@ const playBtn = document.getElementById("play");
 
 playBtn.addEventListener("click", function (event) {
   event.preventDefault();
-  const form = document.getElementById("quantita-tabelline");
-  const extrZone = document.getElementById("extraction-zone");
-  const extrBtn = document.createElement("button");
-  extrBtn.id = "random-number";
-  extrBtn.innerText = "ESTRAZIONE";
-  extrZone.appendChild(extrBtn);
-  extrBtn.addEventListener("click", extractNum);
   const tabNum = document.getElementById("tab-num").value;
-  for (let i = 0; i < tabNum; i++) {
-    playerTabGen();
+  if (tabNum > 10) {
+    alert("Puoi avere massimo 10 tabelline!");
+    return;
+  } else {
+    const form = document.getElementById("quantita-tabelline");
+    const extrZone = document.getElementById("extraction-zone");
+    const extrBtn = document.createElement("button");
+    extrBtn.id = "random-number";
+    extrBtn.innerText = "ESTRAZIONE";
+    extrZone.appendChild(extrBtn);
+    extrBtn.addEventListener("click", extractNum);
+    for (let i = 0; i < tabNum; i++) {
+      playerTabGen();
+    }
+    form.remove(form);
   }
-  form.remove(form);
 });
