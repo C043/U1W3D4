@@ -59,9 +59,9 @@ const extractNum = function () {
         playerNums[i].parentElement.classList.add("extracted-number");
       }
     }
-    if (randomNumber === playerNums) {
-    }
     randomNumbers.push(randomNumber);
+  } else if (randomNumbers.length === 76) {
+    return;
   } else {
     return extractNum();
   }
