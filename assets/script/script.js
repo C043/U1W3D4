@@ -11,6 +11,31 @@ const createBoard = function () {
   }
 };
 
+const playerTabGen = function () {
+  const playerNums = [];
+  const playerZone = document.getElementById("player-zone");
+  const playerTab = document.createElement("div");
+  playerTab.classList.add("player-tab");
+  let i = 0;
+  while (i < 24) {
+    const randomNumber = Math.floor(Math.random() * 76) + 1;
+    if (!playerNums.includes(randomNumber)) {
+      const numberCell = document.createElement("div");
+      numberCell.classList.add("game-cell");
+      const number = document.createElement("h2");
+      number.classList.add("player-num");
+      number.innerText = randomNumber;
+      numberCell.appendChild(number);
+      playerTab.appendChild(numberCell);
+      playerNums.push(randomNumber);
+      i++;
+    }
+  }
+  playerZone.appendChild(playerTab);
+};
+
+window.addEventListener("DOMContentLoaded", createBoard(), playerTabGen());
+// Parte dinamica
 const extrBtn = document.getElementById("random-number");
 
 const randomNumbers = [];
@@ -25,14 +50,25 @@ const extractNum = function () {
     const numbers = document.getElementsByClassName("game-cell");
     const extractedNumber = numbers[randomNumber - 1];
     extractedNumber.classList.add("extracted-number");
+
+    const playerNums = document.getElementsByClassName("player-num");
+    for (let i = 0; i < playerNums.length; i++) {
+      const currentNum = parseInt(playerNums[i].innerText);
+      if (currentNum === randomNumber) {
+        playerNums[i].parentElement.classList.add("extracted-number");
+      }
+    }
+    if (randomNumber === playerNums) {
+    }
     randomNumbers.push(randomNumber);
   } else {
-    console.log("e quindi?");
     return extractNum();
   }
 };
 
 extrBtn.addEventListener("click", extractNum);
 
-window.addEventListener("DOMContentLoaded", createBoard());
-// Parte dinamica
+const randomNumber = function () {
+  const randomNumber = Math.floor(Math.random() * 76) + 1;
+  return randomNumber;
+};

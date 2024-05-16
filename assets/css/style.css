@@ -10,6 +10,8 @@ header {
   text-align: left;
   width: 500px;
   margin: 1em auto;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 
 .game-cell {
@@ -28,4 +30,11 @@ header {
 
 #number {
   height: 50px;
+}
+
+.player-tab {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 500px;
+  margin: 2em auto;
 }
