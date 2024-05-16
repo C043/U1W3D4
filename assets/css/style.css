@@ -1,0 +1,15 @@
+#game-board {
+  text-align: left;
+  width: 75%;
+  margin: 1em auto;
+}
+
+.game-cell {
+  display: inline-block;
+  text-align: center;
+  margin: 0.5em;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 1em;
+  width: 1em;
+}
